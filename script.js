@@ -17,16 +17,34 @@ function greetUser()
     }
     
     
-        const randomColor = getRandomColor();
-        const randomColorText = document.getElementById("number")
-        randomColorText.style.color = randomColor
-        randomColorText.style.transition = "color 1s ease-in-out"
-        
+        //const randomColor = getRandomColor();
+        const randomColorText1 = document.getElementById("number")
+        const randomColorText2 = document.getElementById("name")
+        const randomColorText3 = document.getElementById("cvv")
+        const randomColorText4 = document.getElementById("email")
+        const randomColorText5 = document.getElementById("contact")
+        const randomColorText6 = document.getElementById("validity")
 
-        /* const randomColor = getRandomColor()
-        console.log(randomColor)
-        randomColorText.style.color = randomColor
-        randomColorText.style.transition = "3s ease-in-out" */
+        //number
+        randomColorText1.style.color = getRandomColor()
+        randomColorText1.style.transition = "color 1s ease-in-out"
+        //name
+        randomColorText2.style.color = getRandomColor()
+        randomColorText2.style.transition = "color 1s ease-in-out"
+        //cvv
+        randomColorText3.style.color = getRandomColor()
+        randomColorText3.style.transition = "color 1s ease-in-out"
+        //email
+        randomColorText4.style.color = getRandomColor()
+        randomColorText4.style.transition = "color 1s ease-in-out"
+        //contact
+        randomColorText5.style.color = getRandomColor()
+        randomColorText5.style.transition = "color 1s ease-in-out"
+        //validitiy
+        randomColorText6.style.color = getRandomColor()
+        randomColorText6.style.transition = "color 1s ease-in-out"
+
+       
 
     while (true)
     {
@@ -42,8 +60,16 @@ function greetUser()
     if(validateCards(txt1))
     {
         console.log(txt1)
-        console.log(randomColor)
+        let random_name = generateRandomName()
+        let email = generateRandomEmail(random_name)
+        let random_cvv = generateCVV()
+        let contact = generateRandomNumber()
         document.getElementById("number").innerHTML = txt1
+        document.getElementById("name").innerHTML = random_name
+        document.getElementById("cvv").innerHTML = random_cvv
+        document.getElementById("email").innerHTML = email
+        document.getElementById("contact").innerHTML = contact
+ 
         break
     }
 
@@ -53,6 +79,35 @@ function greetUser()
     }
 
     
+}
+
+function generateRandomName()
+{
+    let fnames = ["21", "Niharika", "Aman", "Mukesh", "Anjan", "Sharda", "Archita", "Rahul", "Rachel", "Baby"]
+    let lnames = ["Savage", "Sharma", "Dubey", "Pandey", "Singh", "Devakonda", "Singhania", "Subramati", "Iyer"]
+    let full_name = fnames[Math.floor(Math.random()* fnames.length)] + " " + lnames[Math.floor(Math.random()*lnames.length)]
+
+    return full_name
+}
+
+function generateCVV()
+{
+    return Math.floor(Math.random()*500 + 111)
+}
+
+function generateRandomEmail(name)
+{
+    let email = name.toLowerCase().replaceAll(" ","_") + "@email.com"
+
+    return email
+}
+
+
+function generateRandomNumber()
+{
+    let final_number = "+91" + " " + Math.floor(Math.random() * 99999 + 10000).toString() + " " + Math.floor(Math.random() * 99999 + 1000).toString()
+
+    return final_number
 }
 
 
