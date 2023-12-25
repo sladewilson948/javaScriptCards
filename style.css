@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(50, 186, 190);
+    background-color: rgb(0, 0, 0);
     height: 100vh;
 }
 
@@ -28,7 +28,7 @@ body {
     background-color: aqua;
     border: 7px solid black;
     border-radius: 15px;
-    height: 40vh;
+    height: 50vh;
     min-width: 50%;
 }
 
@@ -45,6 +45,7 @@ body {
 
 .title {
     font-size: 40px;
+    color: aliceblue;
 }
 
 .styled-button {
@@ -58,6 +59,7 @@ body {
     border-radius: 3px;
     background-color: rgb(83, 189, 216);
     color: black;
+    font-family: 'Silkscreen', sans-serif;
 }
 
 .styled-button:hover {
@@ -65,18 +67,37 @@ body {
     color: white;
 }
 
-.number {
-    font-size: 60px;
+.details {
+    font-size: 45px;
 }
 
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+    }
+
     .container {
-        min-width: 90%;
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        border: 7px solid black;
+        border-radius: 15px;
+        height: 25vh;
+        min-width: 60%;
+        
     }
 
     .button {
-        font-size: 14px;
+        font-size: 12px;
+        padding: 10px 20px;
     }
 
     .title {
@@ -84,11 +105,11 @@ body {
     }
 
     .styled-button {
-        font-size: 16px;
-        padding: 8px;
+        font-size: 10px;
+        padding: 2px;
     }
 
-    .number {
-        font-size: 22px;
+    .details {
+        font-size: 12px;
     }
 }
