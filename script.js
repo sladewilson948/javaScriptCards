@@ -83,8 +83,8 @@ function greetUser()
 
 function generateRandomName()
 {
-    let fnames = ["21", "Niharika", "Aman", "Mukesh", "Anjan", "Sharda", "Archita", "Rahul", "Rachel", "Baby"]
-    let lnames = ["Savage", "Sharma", "Dubey", "Pandey", "Singh", "Devakonda", "Singhania", "Subramati", "Iyer"]
+    let fnames = ["Aman", , "Archita", "Rahul", "Rachel", "Narendra", "Donald", "Kristen"]
+    let lnames = ["Savage", "Sharma", "Dubey", "Pandey", "Singh", "Modi", "Trump", "Stewart"]
     let full_name = fnames[Math.floor(Math.random()* fnames.length)] + " " + lnames[Math.floor(Math.random()*lnames.length)]
 
     return full_name
