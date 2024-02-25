@@ -107,7 +107,7 @@ function generateRandomEmail(name)
 
 function generateRandomNumber()
 {
-    let final_number = "+91" + " " + Math.floor(Math.random() * 99999 + 10000).toString() + " " + Math.floor(Math.random() * 99999 + 1000).toString()
+    let final_number = "+91" + " " + Math.floor(Math.random() * 99999 + 10000).toString() + " " + Math.floor(Math.random() * 99999 + 10000).toString()
 
     return final_number
 }
