@@ -85,7 +85,9 @@ function generateRandomName()
 {
     let fnames = ["Aman", , "Archita", "Rahul", "Rachel", "Narendra", "Donald", "Kristen"]
     let lnames = ["Savage", "Sharma", "Dubey", "Pandey", "Singh", "Modi", "Trump", "Stewart"]
-    let full_name = fnames[Math.floor(Math.random()* fnames.length)] + " " + lnames[Math.floor(Math.random()*lnames.length)]
+    const flen = fnames.length
+    const llen = lnames.length
+    let full_name = fnames[Math.floor(Math.random()* flen)] + " " + lnames[Math.floor(Math.random()*llen)]
 
     return full_name
 }
