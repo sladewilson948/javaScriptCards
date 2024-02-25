@@ -83,7 +83,7 @@ function greetUser()
 
 function generateRandomName()
 {
-    let fnames = ["Aman", , "Archita", "Rahul", "Rachel", "Narendra", "Donald", "Kristen"]
+    let fnames = ["Aman", "Archita", "Rahul", "Rachel", "Narendra", "Donald", "Kristen"]
     let lnames = ["Savage", "Sharma", "Dubey", "Pandey", "Singh", "Modi", "Trump", "Stewart"]
     const flen = fnames.length
     const llen = lnames.length
